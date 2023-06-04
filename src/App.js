@@ -9,7 +9,7 @@ function App() {
       <div>
         <NavBar/>
         <SearchBar/>
-        <NewsList/>
+        {/*<NewsList/>*/}
         <Footer/>
       </div>
   );
