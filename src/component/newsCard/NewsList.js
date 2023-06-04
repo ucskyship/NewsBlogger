@@ -16,13 +16,12 @@ const NewsList = () => {
         <div>
             {articles.map(article =>
                     <NewsCard
-                        key={article.title}
+                        key={article.source.id}
                         title={article.title}
                         description={article.description}
                         url={article.url}
                         urlToImage={article.urlToImage}
                     />
-
             )}
         </div>
     )
