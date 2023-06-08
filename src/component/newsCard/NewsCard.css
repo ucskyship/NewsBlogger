@@ -1,0 +1,33 @@
+.newsCards {
+    margin-top: 2rem;
+    position: relative;
+    border: solid red 3px;
+}
+
+.image {
+    border-radius: 12px;
+    height: 12rem;
+    width: 15rem;
+}
+
+.header {
+    padding: 5px;
+    width: 15rem;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    /*color: #6096c7;*/
+}
+
+.header > a {
+    text-decoration: none;
+}
+
+.des {
+    width: 15rem;
+    font-family: 'Poppins', 'Inter', serif;
+    font-style: normal;
+    font-weight: 5;
+    font-size: 12px;
+    line-height: 120%;
+}

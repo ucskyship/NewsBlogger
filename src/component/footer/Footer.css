@@ -1,0 +1,17 @@
+.foot {
+    background-color: #281c1c;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+.foot > p{
+    font-size: 12px;
+    padding: 1rem;
+    color: white;
+    font-family: "Apple Braille",fantasy;
+    text-align: center;
+}
