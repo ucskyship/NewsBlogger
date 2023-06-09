@@ -1,3 +1,60 @@
+@media only screen and (min-width: 360px) and  (max-width: 414px) {
+    .image {
+        width: 22rem !important;
+    }
+    .header {
+        width: 22rem !important;
+    }
+    .des {
+        width: 22rem !important;
+    }
+}
+
+@media only screen and (min-width: 900px) and  (max-width: 912px) {
+    .image {
+        width: 14rem !important;
+    }
+    .header {
+        width: 14rem !important;
+    }
+    .des {
+        width: 14rem !important;
+    }
+}
+
+@media only screen and (min-width: 358px) and  (max-width: 360px) {
+    .image {
+        width: 20rem !important;
+    }
+    .header {
+        width: 20rem !important;
+    }
+    .des {
+        width: 20rem !important;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .image {
+        height: 8rem !important;
+    }
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 540px) {
+    .image {
+        width: 32rem !important;
+        height: 18rem !important;
+    }
+    .header {
+        width: 32rem !important;
+    }
+    .des {
+        width: 32rem !important;
+    }
+}
+
+
 .newsCards {
     margin-top: 2rem;
     position: relative;
