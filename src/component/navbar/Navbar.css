@@ -9,6 +9,24 @@
     }
 }
 
+@media only screen and (min-width: 820px) and (max-width: 1246px){
+    .navBar .logo {
+        margin-left: 11rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .navBar .logo {
+        margin-left: 20rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .navBar .logo {
+        margin-left: 11rem;
+    }
+}
+
 .navBar {
     justify-content: space-around;
     z-index: 1;

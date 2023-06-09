@@ -9,7 +9,7 @@ const NewsList = () => {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
         const getArticles = async () => {
-            const response = await axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b983f6103551414eafeb34bb73618939')
+            const response = await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-06-07&to=2023-06-07&sortBy=popularity&apiKey=b983f6103551414eafeb34bb73618939')
             console.log(response)
             setArticles(response.data.articles);
         }
