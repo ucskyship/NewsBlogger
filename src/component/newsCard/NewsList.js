@@ -16,6 +16,9 @@ const NewsList = () => {
         getArticles();
     },[])
 
+    const [query, setQuery] = useState("");
+    console.log(query)
+
     return(
         <div className={'allCards'}>
             {articles.map(article =>
