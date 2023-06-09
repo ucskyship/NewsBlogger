@@ -18,7 +18,6 @@ const NewsList = () => {
 
     return(
         <div className={'allCards'}>
-            <div className={'news'}><h1> News </h1></div>
             {articles.map(article =>
                 <NewsCard
                     key={article.source.id}

@@ -1,12 +1,11 @@
-@media only screen and (max-width: 830px){
-.navBar{
-    display: flex;
-    border: solid 1px red;
+@media only screen and (max-width: 820px){
+    .navBar. input {
+        display: flex;
     }
     .navBar .logo {
         height: 45px;
-        border: solid 1px red;
-        margin-left: 5rem;
+        margin-left: 13rem;
+        margin-right: 7rem;
     }
 }
 
@@ -17,23 +16,20 @@
     position: fixed;
     width: 100%;
     top: 0;
-    box-shadow: 0.1px 0.1px;
+    box-shadow: 0.1px 0.1px #1c6193;
     background-color: white;
 
 }
 
 .logo {
     display: flex;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-left: -2rem;
     box-sizing: border-box;
     height: 80px;
     box-shadow: black;
 }
 
-
 .icon:hover{
     cursor: pointer;
     text-decoration-style: dotted;
 }
-

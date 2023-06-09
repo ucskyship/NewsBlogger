@@ -1,6 +1,6 @@
+import React from "react";
 import logo from '../../assets/logo.svg'
 import './Navbar.css'
-import React from "react";
 import icon from "../../assets/searchIcon.svg";
 import './SearchBar.css'
 
