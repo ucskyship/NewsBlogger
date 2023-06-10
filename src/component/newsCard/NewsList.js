@@ -4,7 +4,6 @@ import NewsCard from "./NewsCard";
 import './Card.css'
 import '../paginate/Paginate'
 
-
 const NewsList = () => {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
@@ -15,9 +14,6 @@ const NewsList = () => {
         }
         getArticles();
     },[])
-
-    const [query, setQuery] = useState("");
-    console.log(query)
 
     return(
         <div className={'allCards'}>
@@ -33,5 +29,4 @@ const NewsList = () => {
         </div>
     )
 }
-
 export default NewsList;

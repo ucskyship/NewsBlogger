@@ -3,9 +3,11 @@ import logo from '../../assets/logo.svg'
 import './Navbar.css'
 import icon from "../../assets/searchIcon.svg";
 import './SearchBar.css'
-import '../newsCard/NewsList'
+import './Search'
+import searchObj from "./Search";
 
-function NavBar() {
+const NavBar = () => {
+
     return (
         <div className={'navBar'}>
                 <img className={'logo'} src={logo} alt={logo}/>
@@ -13,7 +15,8 @@ function NavBar() {
                 <input className={"inputField"}
                        type={"text"}
                        placeholder={'Search here...'}
-                       onChange={e=> e.setQuery(e.target.value)}
+                       // value={searchObj.filter}
+                       // onChange={searchObj.searchText.bind(this)}
                 />
                 <img className={'searchIcon'} src={icon} alt={'icon'}/>
             </div>
