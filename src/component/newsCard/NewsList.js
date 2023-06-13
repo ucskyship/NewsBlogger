@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useContext} from "react";
 import axios from 'axios'
 import NewsCard from "./NewsCard";
 import './Card.css'
 import '../paginate/Paginate'
-
+import { ArticlesContext } from "../../context";
 
 const NewsList = () => {
-    const [articles, setArticles] = useState([]);
+    const { articles, setArticles } = useContext(ArticlesContext);
     useEffect(() => {
         const getArticles = async () => {
             const response = await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-06-07&to=2023-06-07&sortBy=popularity&apiKey=b983f6103551414eafeb34bb73618939')
