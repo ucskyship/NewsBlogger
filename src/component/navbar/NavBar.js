@@ -1,12 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/logo.svg";
 import "./Navbar.css";
 import icon from "../../assets/searchIcon.svg";
 import "./SearchBar.css";
 import { ArticlesContext } from "../../context";
 
-function NavBar() {
-  const { articles, setArticles } = useContext(ArticlesContext);
+const NavBar = () => {
+  const { setArticles, articles, allArticles } = useContext(ArticlesContext);
+  const [value, setValue] = useState("");
+
+  const performSearch = (e) => {
+    setValue(e.target.value);
+    console.log(e.target.value);
+    if (e.target.value === "") {
+      console.log("all arts");
+      console.log(allArticles);
+      setArticles(allArticles);
+      return;
+    }
+    const filterArts = articles.filter((article) =>
+      article.title.toLowerCase().includes(value.toLowerCase())
+    );
+    console.log("filtered arts", filterArts);
+
+    setArticles(filterArts);
+  };
   return (
     <div className={"navBar"}>
       <img className={"logo"} src={logo} alt={logo} />
@@ -15,11 +33,18 @@ function NavBar() {
           className={"inputField"}
           type={"text"}
           placeholder={"Search here..."}
+          value={value}
+          onChange={(e) => performSearch(e)}
         />
-        <img className={"searchIcon"} src={icon} alt={"icon"} />
+        <img
+          //   onClick={performSearch}
+          className={"searchIcon"}
+          src={icon}
+          alt={"icon"}
+        />
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;

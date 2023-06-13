@@ -1,34 +1,39 @@
-import React, { useEffect, useState , useContext} from "react";
-import axios from 'axios'
+import React, { useEffect, useContext } from "react";
+import axios from "axios";
 import NewsCard from "./NewsCard";
-import './Card.css'
-import '../paginate/Paginate'
+import "./Card.css";
+import "../paginate/Paginate";
 import { ArticlesContext } from "../../context";
 
 const NewsList = () => {
-    const { articles, setArticles } = useContext(ArticlesContext);
-    useEffect(() => {
-        const getArticles = async () => {
-            const response = await axios.get('https://newsapi.org/v2/everything?q=apple&from=2023-06-07&to=2023-06-07&sortBy=popularity&apiKey=b983f6103551414eafeb34bb73618939')
-            console.log(response)
-            setArticles(response.data.articles);
-        }
-        getArticles();
-    },[])
+  const { articles } = useContext(ArticlesContext);
+  console.log("articles from news list", articles);
+  if (articles.length < 1) {
+    return (
+      <div className={"allCards"}>
+        <p
+          style={{
+            border: "solid 1px red",
+          }}
+        >
+          Nothing Found
+        </p>
+      </div>
+    );
+  }
 
-    return(
-        <div className={'allCards'}>
-            {articles.map(article =>
-                <NewsCard
-                    key={article.source.id}
-                    title={article.title}
-                    description={article.description}
-                    url={article.url}
-                    urlToImage={article.urlToImage}
-                />
-            )}
-        </div>
-    )
-}
-
+  return (
+    <div className={"allCards"}>
+      {articles.map((article, index) => (
+        <NewsCard
+          key={index}
+          title={article.title}
+          description={article.description}
+          url={article.url}
+          urlToImage={article.urlToImage}
+        />
+      ))}
+    </div>
+  );
+};
 export default NewsList;

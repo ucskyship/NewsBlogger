@@ -28,8 +28,8 @@
 }
 
 .navBar {
-    justify-content: space-around;
     z-index: 1;
+    justify-content: space-around;
     display: flex;
     position: fixed;
     width: 100%;
