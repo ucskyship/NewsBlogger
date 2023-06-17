@@ -12,3 +12,31 @@
     margin-left: 7%;
     margin-right: 7%;
 }
+
+@media only screen and (max-width: 375px) {
+    .emptyState >img{
+        width: 5rem;
+        height: 20rem;
+        display: flex;
+    }
+}
+
+.emptyState {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /*border: red solid 2px;*/
+}
+
+.emptyState >img{
+    height: 33.5rem;
+    width: 35rem;
+}
+
+.emptyState >p{
+    margin-bottom: 5rem;
+    font-size: 20px;
+    display: flex;
+    font-style: italic;
+    font-weight: 1;
+}

@@ -32,7 +32,6 @@ const Search = () => {
         onChange={(e) => performSearch(e)}
       />
       <img
-        //   onClick={performSearch}
         className={"searchIcon"}
         src={icon}
         alt={"icon"}

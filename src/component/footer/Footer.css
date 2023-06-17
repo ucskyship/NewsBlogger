@@ -1,5 +1,5 @@
 .foot {
-    /*position: absolute;*/
+    /*position: fixed;fixed*/
     background-color: #281c1c;
     justify-content: center;
     width: 100%;

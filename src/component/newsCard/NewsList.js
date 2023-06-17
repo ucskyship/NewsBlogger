@@ -1,21 +1,18 @@
 import React, { useEffect, useContext } from "react";
-import axios from "axios";
 import NewsCard from "./NewsCard";
 import "./Card.css";
 import "../paginate/Paginate";
 import { ArticlesContext } from "../../context";
+import emptyState from '../../assets/emptyState.png'
 
 const NewsList = () => {
   const { articles } = useContext(ArticlesContext);
   console.log("articles from news list", articles);
   if (articles.length < 1) {
     return (
-      <div className={"allCards"}>
-        <p
-          style={{
-            border: "solid 1px red",
-          }}
-        >
+      <div className={"emptyState"}>
+        <img src={emptyState} alt={"Nothing Found"}/>
+        <p className={"notFound"}>
           Nothing Found
         </p>
       </div>
