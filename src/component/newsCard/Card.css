@@ -5,6 +5,15 @@
     }
 }
 
+.emptyState >img{
+    width: 5rem;
+    height: 20rem;
+    display: flex;
+}
+
+@media only screen and (max-width: 375px) {
+}
+
 .allCards {
     display: flex;
     flex-wrap: wrap;
@@ -12,15 +21,6 @@
     margin-left: 7%;
     margin-right: 7%;
 }
-
-@media only screen and (max-width: 375px) {
-    .emptyState >img{
-        width: 5rem;
-        height: 20rem;
-        display: flex;
-    }
-}
-
 .emptyState {
     align-items: center;
     display: flex;

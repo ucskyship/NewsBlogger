@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import NewsCard from "./NewsCard";
 import "./Card.css";
 import "../paginate/Paginate";
