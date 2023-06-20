@@ -27,7 +27,7 @@ const NewsList = () => {
           title={article.title}
           description={article.description}
           url={article.url}
-          urlToImage={article.urlToImage}
+          urlToImage={article.image}
         />
       ))}
     </div>
