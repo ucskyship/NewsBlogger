@@ -8,7 +8,7 @@ const ArticlesContextProvider = ({ children }) => {
   useEffect(() => {
     const getArticles = async () => {
       const response = await axios.get(
-        // "https://gnews.io/api/v4/top-headlines?category=general&apikey=ac9fb33216075883d55f99aefbcb6053"
+        "https://gnews.io/api/v4/top-headlines?category=general&apikey=ac9fb33216075883d55f99aefbcb6053"
       );
 
       setArticles(response.data.articles);
